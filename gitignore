@@ -1,0 +1,74 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================
+# Virtual Environments
+# =========================
+.venv/
+venv/
+env/
+ENV/
+
+# Conda
+.conda/
+conda-meta/
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# Streamlit
+# =========================
+.streamlit/secrets.toml
+
+# =========================
+# Environment Variables
+# =========================
+.env
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Models
+# =========================
+models/*.pkl
+models/*.joblib
+
+# Keep folder structure
+!models/.gitkeep
+
+# =========================
+# Data
+# =========================
+data/processed/*
+!data/processed/.gitkeep
+
+# Raw datasets can become large
+# Uncomment if needed in future
+# data/raw/*
+
+# =========================
+# macOS
+# =========================
+.DS_Store
+
+# =========================
+# Windows
+# =========================
+Thumbs.db
+desktop.ini
