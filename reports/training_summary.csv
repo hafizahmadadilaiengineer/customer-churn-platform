@@ -1,0 +1,8 @@
+Metric,Value
+Best Model,Random Forest
+Cross Validation AUC,0.8602
+Test ROC AUC,0.853
+Best Threshold,0.35
+Precision,0.5705
+Recall,0.7246
+F1 Score,0.6384
