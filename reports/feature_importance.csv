@@ -1,0 +1,52 @@
+Feature,Importance
+cat__Contract_Month-to-month,0.10980011137046211
+num__Tenure Months,0.10887466225804898
+num__Total Charges,0.08635071191929235
+num__Avg Monthly Spend,0.06531215170137103
+num__Monthly Charges,0.06410271597800894
+cat__Online Security_No,0.051403372734404096
+cat__Tech Support_No,0.048466358262243374
+cat__Internet Service_Fiber optic,0.046706293487045886
+cat__Customer Age Group_New,0.044961686227835494
+cat__Dependents_No,0.03510264179617997
+cat__Payment Method_Electronic check,0.034795014253888056
+cat__Dependents_Yes,0.03391671379663583
+cat__Contract_Two year,0.02220964798049132
+cat__Internet Service_DSL,0.014629045884649366
+cat__Customer Age Group_Very Loyal,0.013254871854319677
+cat__Online Backup_No,0.012344472660501758
+cat__Paperless Billing_No,0.010637333804773911
+cat__Contract_One year,0.010604302232208603
+cat__Paperless Billing_Yes,0.01027622255110115
+cat__Device Protection_No,0.010141174573812467
+cat__Online Security_Yes,0.00941314618268155
+cat__Partner_No,0.008149567794738686
+cat__Streaming Movies_No internet service,0.0081365449123535
+cat__Partner_Yes,0.008027230938481287
+cat__Multiple Lines_No,0.007731375969731562
+cat__Gender_Male,0.007432134018133488
+cat__Online Backup_Yes,0.007360425311331377
+cat__Gender_Female,0.00731347827860657
+cat__Tech Support_Yes,0.007112627309530925
+cat__Multiple Lines_Yes,0.0068032830894731115
+cat__Streaming TV_Yes,0.006344163027555011
+cat__Streaming Movies_Yes,0.0063243391315101335
+cat__Streaming TV_No,0.005338245818336099
+cat__Streaming Movies_No,0.0052346440155329604
+cat__Payment Method_Credit card (automatic),0.005135048221413541
+cat__Senior Citizen_Yes,0.005088994643282612
+cat__Payment Method_Bank transfer (automatic),0.0050729905772631005
+cat__Device Protection_Yes,0.004939764978607997
+cat__Senior Citizen_No,0.0047993839981396065
+cat__Device Protection_No internet service,0.004648587225057223
+cat__Customer Age Group_Loyal,0.00463579048797374
+cat__Customer Age Group_Growing,0.004448428897672757
+cat__Internet Service_No,0.004299489371367029
+cat__Payment Method_Mailed check,0.0040799058118537864
+cat__Online Backup_No internet service,0.003722122432455075
+cat__Tech Support_No internet service,0.003570234243113282
+cat__Multiple Lines_No phone service,0.00243129674069176
+cat__Phone Service_Yes,0.0024182075236073414
+cat__Phone Service_No,0.00222360915743402
+cat__Streaming TV_No internet service,0.0020161935962671983
+cat__Online Security_No internet service,0.0018592409685293206

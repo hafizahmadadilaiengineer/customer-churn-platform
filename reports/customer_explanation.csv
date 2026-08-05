@@ -1,0 +1,52 @@
+Feature,SHAP Value,Customer Value,Impact
+cat__Contract_Month-to-month,-0.058652183821151095,0.0,Decrease Churn Risk
+num__Tenure Months,-0.05750914540473498,1.6084834273893616,Decrease Churn Risk
+cat__Contract_Two year,-0.04605769179418394,1.0,Decrease Churn Risk
+num__Total Charges,-0.03101208795390056,2.7068275180093,Decrease Churn Risk
+cat__Online Security_No,-0.027421798576909392,0.0,Decrease Churn Risk
+cat__Customer Age Group_New,-0.02612585931369573,0.0,Decrease Churn Risk
+cat__Internet Service_Fiber optic,0.02441397016176422,1.0,Increase Churn Risk
+cat__Tech Support_No,-0.02093480881706792,0.0,Decrease Churn Risk
+num__Avg Monthly Spend,0.020906435167352935,1.7404824245402513,Increase Churn Risk
+cat__Customer Age Group_Very Loyal,-0.016942611152475265,1.0,Decrease Churn Risk
+num__Monthly Charges,0.011811786971863851,1.6299763471022684,Increase Churn Risk
+cat__Dependents_Yes,0.011149704892862189,0.0,Increase Churn Risk
+cat__Dependents_No,0.01102410371370766,1.0,Increase Churn Risk
+cat__Payment Method_Electronic check,-0.010093414102828834,0.0,Decrease Churn Risk
+cat__Online Backup_No,-0.008950676761578395,0.0,Decrease Churn Risk
+cat__Online Security_Yes,-0.008681779108783715,1.0,Decrease Churn Risk
+cat__Contract_One year,-0.006427590032146756,0.0,Decrease Churn Risk
+cat__Internet Service_DSL,0.006064150277637241,0.0,Increase Churn Risk
+cat__Online Backup_Yes,-0.00557737713079607,1.0,Decrease Churn Risk
+cat__Device Protection_No,-0.005081225925923602,0.0,Decrease Churn Risk
+cat__Tech Support_Yes,-0.004799496514179729,1.0,Decrease Churn Risk
+cat__Payment Method_Credit card (automatic),-0.004040431625978862,1.0,Decrease Churn Risk
+cat__Streaming TV_Yes,0.0032579525175026568,1.0,Increase Churn Risk
+cat__Streaming Movies_Yes,0.0031609823767710992,1.0,Increase Churn Risk
+cat__Paperless Billing_No,0.0023526731691194225,0.0,Increase Churn Risk
+cat__Paperless Billing_Yes,0.0023008592482749975,1.0,Increase Churn Risk
+cat__Streaming Movies_No internet service,0.0020068476322036293,0.0,Increase Churn Risk
+cat__Multiple Lines_Yes,0.0018523211450698109,1.0,Increase Churn Risk
+cat__Streaming TV_No,0.0018226906188299008,0.0,Increase Churn Risk
+cat__Device Protection_No internet service,0.0017543715398647068,0.0,Increase Churn Risk
+cat__Multiple Lines_No,0.0016227782561743123,0.0,Increase Churn Risk
+cat__Gender_Female,0.0016083857273539123,0.0,Increase Churn Risk
+cat__Device Protection_Yes,-0.0015148392840260213,1.0,Decrease Churn Risk
+cat__Internet Service_No,0.0015034050586765462,0.0,Increase Churn Risk
+cat__Gender_Male,0.0014645201922654995,1.0,Increase Churn Risk
+cat__Customer Age Group_Growing,-0.001298487593492615,0.0,Decrease Churn Risk
+cat__Streaming Movies_No,0.0011734125705112931,0.0,Increase Churn Risk
+cat__Online Security_No internet service,0.0009098494218851124,0.0,Increase Churn Risk
+cat__Online Backup_No internet service,0.0008904979034847517,0.0,Increase Churn Risk
+cat__Tech Support_No internet service,0.0007937535886284299,0.0,Increase Churn Risk
+cat__Payment Method_Bank transfer (automatic),-0.0006941013328116465,0.0,Decrease Churn Risk
+cat__Partner_No,0.0006714769995445852,0.0,Increase Churn Risk
+cat__Streaming TV_No internet service,0.00049804388452227,0.0,Increase Churn Risk
+cat__Customer Age Group_Loyal,-0.00047976107402089764,0.0,Decrease Churn Risk
+cat__Senior Citizen_Yes,0.0002494683006712458,0.0,Increase Churn Risk
+cat__Partner_Yes,-0.0002428110098786317,1.0,Decrease Churn Risk
+cat__Multiple Lines_No phone service,-0.00024170463539895036,0.0,Decrease Churn Risk
+cat__Phone Service_Yes,-0.0002282800142612898,1.0,Decrease Churn Risk
+cat__Payment Method_Mailed check,0.00017951062163689088,0.0,Increase Churn Risk
+cat__Phone Service_No,-7.667077790055885e-05,0.0,Decrease Churn Risk
+cat__Senior Citizen_No,7.218595811988824e-05,1.0,Increase Churn Risk
