@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.log
+.ipynb_checkpoints/
+.pytest_cache/
+.git/
+.vscode/
+.env
+docs/
+docker-compose.yml
+gitignore
+notebooks/
+README.md
+reports/
+screenshots/
+tests/

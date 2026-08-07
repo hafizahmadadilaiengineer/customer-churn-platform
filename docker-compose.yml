@@ -1,0 +1,12 @@
+services:
+
+  streamlit:
+
+    build: .
+
+    container_name: customer-churn-streamlit
+
+    ports:
+      - "8501:8501"
+
+    restart: unless-stopped
