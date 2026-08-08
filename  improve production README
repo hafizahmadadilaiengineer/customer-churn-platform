@@ -1,0 +1,397 @@
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 1d3d7c7..dafc354 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,54 +1,363 @@[m
+[31m-# 🚀 Customer Churn Intelligence Platform[m
+[32m+[m[32m# Customer Churn Intelligence Platform[m
+ [m
+[31m-An end-to-end Machine Learning application that predicts customer churn, explains predictions using Explainable AI, and recommends retention strategies for businesses.[m
+[32m+[m[32mAn end-to-end machine learning platform for predicting customer churn, explaining model predictions, and providing actionable customer insights through a production-style web application.[m
+ [m
+[31m----[m
+[32m+[m[32m## Table of Contents[m
+ [m
+[31m-## Project Goals[m
+[32m+[m[32m- [Project Overview](#-project-overview)[m
+[32m+[m[32m- [Business Objective](#-business-objective)[m
+[32m+[m[32m- [System Architecture](#-system-architecture)[m
+[32m+[m[32m- [Machine Learning Workflow](#-machine-learning-workflow)[m
+[32m+[m[32m- [Dataset](#-dataset)[m
+[32m+[m[32m- [Machine Learning Model](#-machine-learning-model)[m
+[32m+[m[32m- [Explainable AI](#-explainable-ai)[m
+[32m+[m[32m- [Application Features](#-application-features)[m
+[32m+[m[32m- [FastAPI REST API](#-fastapi-rest-api)[m
+[32m+[m[32m- [Docker](#-docker)[m
+[32m+[m[32m- [Project Structure](#-project-structure)[m
+[32m+[m[32m- [Technologies](#-technologies)[m
+[32m+[m[32m- [Local Development](#-local-development)[m
+[32m+[m[32m- [Run with Docker Compose](#-run-with-docker-compose)[m
+[32m+[m[32m- [Testing](#-testing)[m
+[32m+[m[32m- [Key Project Highlights](#-key-project-highlights)[m
+[32m+[m[32m- [Author](#-author)[m
+[32m+[m[32m- [License](#-license)[m
+ [m
+[31m-- Predict customer churn[m
+[31m-- Explain predictions[m
+[31m-- Recommend business actions[m
+[31m-- Interactive dashboard[m
+[31m-- REST API[m
+[31m-- Production-ready deployment[m
+[32m+[m[32m## 🚀 Project Overview[m
+ [m
+[31m----[m
+[32m+[m[32mCustomer churn is a major business challenge for subscription-based companies.[m
+ [m
+[31m-## Tech Stack[m
+[32m+[m[32mThis project builds a complete machine learning solution that:[m
+[32m+[m
+[32m+[m[32m- Predicts whether a customer is likely to churn.[m
+[32m+[m[32m- Provides the churn probability.[m
+[32m+[m[32m- Explains individual predictions using SHAP.[m
+[32m+[m[32m- Supports single-customer prediction.[m
+[32m+[m[32m- Supports batch predictions through CSV files.[m
+[32m+[m[32m- Provides model performance analysis.[m
+[32m+[m[32m- Exposes predictions through a FastAPI REST API.[m
+[32m+[m[32m- Provides an interactive Streamlit interface.[m
+[32m+[m[32m- Runs through Docker and Docker Compose.[m
+[32m+[m
+[32m+[m[32m## 🎯 Business Objective[m
+[32m+[m
+[32m+[m[32mThe primary objective is to identify customers who are at high risk of churn so that businesses can take proactive retention actions.[m
+[32m+[m
+[32m+[m[32mThe platform transforms customer data into:[m
+[32m+[m
+[32m+[m[32m**Customer Data → ML Prediction → Churn Risk → Explanation → Business Decision**[m
+[32m+[m
+[32m+[m[32m## 🏗️ System Architecture[m
+[32m+[m
+[32m+[m[32m```text[m
+[32m+[m[32m                     Customer Data[m
+[32m+[m[32m                          │[m
+[32m+[m[32m                          ▼[m
+[32m+[m[32m              ┌────────────────────────┐[m
+[32m+[m[32m              │   Data Preprocessing   │[m
+[32m+[m[32m              │   & Feature Engineering│[m
+[32m+[m[32m              └────────────┬───────────┘[m
+[32m+[m[32m                           │[m
+[32m+[m[32m                           ▼[m
+[32m+[m[32m              ┌────────────────────────┐[m
+[32m+[m[32m              │  Machine Learning      │[m
+[32m+[m[32m              │  Model (Random Forest) │[m
+[32m+[m[32m              └────────────┬───────────┘[m
+[32m+[m[32m                           │[m
+[32m+[m[32m              ┌────────────┴────────────┐[m
+[32m+[m[32m              ▼                         ▼[m
+[32m+[m[32m        Streamlit UI              FastAPI REST API[m
+[32m+[m[32m              │                         │[m
+[32m+[m[32m       ┌──────┴──────┐                  ▼[m
+[32m+[m[32m       ▼             ▼            REST Clients[m
+[32m+[m[32mBusiness Users   SHAP[m
+[32m+[m[32m                 Explanations[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m## 🧠 Machine Learning Workflow[m
+[32m+[m
+[32m+[m[32mThe project follows an end-to-end ML workflow:[m
+[32m+[m
+[32m+[m[32m1. Exploratory Data Analysis[m
+[32m+[m[32m2. Data Cleaning[m
+[32m+[m[32m3. Feature Engineering[m
+[32m+[m[32m4. Data Preprocessing[m
+[32m+[m[32m5. Train/Test Split[m
+[32m+[m[32m6. Model Training[m
+[32m+[m[32m7. Model Evaluation[m
+[32m+[m[32m8. Explainable AI[m
+[32m+[m[32m9. Prediction Services[m
+[32m+[m[32m10. Application Development[m
+[32m+[m[32m11. API Development[m
+[32m+[m[32m12. Dockerization[m
+[32m+[m[32m13. Production Testing[m
+[32m+[m
+[32m+[m[32m## 📊 Dataset[m
+[32m+[m
+[32m+[m[32mThe project uses the IBM Telco Customer Churn dataset containing **7,043** customers.[m
+[32m+[m
+[32m+[m[32mThe dataset contains customer demographic, service, contract, billing, and churn-related information. The machine learning model uses customer features available at prediction time to predict the customer's churn status against the binary target column (`Churn Label`).[m
+[32m+[m
+[32m+[m[32m## 🤖 Machine Learning Model[m
+[32m+[m
+[32m+[m[32mThe final model is based on a **Random Forest Classifier**. The performance summary is available in `reports/training_summary.csv`:[m
+[32m+[m
+[32m+[m[32m| Metric | Value |[m
+[32m+[m[32m| --- | --- |[m
+[32m+[m[32m| Best Model | Random Forest |[m
+[32m+[m[32m| Cross-Validation AUC | 0.8602 |[m
+[32m+[m[32m| Test ROC AUC | 0.853 |[m
+[32m+[m[32m| Best Prediction Threshold | 0.35 |[m
+[32m+[m[32m| Precision | 0.5705 |[m
+[32m+[m[32m| Recall | 0.7246 |[m
+[32m+[m[32m| F1 Score | 0.6384 |[m
+[32m+[m
+[32m+[m[32mThe trained artifacts (in `models/`) include:[m
+[32m+[m
+[32m+[m[32m- Trained classification model (`final_churn_model.pkl`)[m
+[32m+[m[32m- Preprocessing pipeline (`preprocessor.pkl`)[m
+[32m+[m[32m- Churn prediction threshold (`best_threshold.pkl`)[m
+[32m+[m
+[32m+[m[32m## 🔍 Explainable AI[m
+[32m+[m
+[32m+[m[32mSHAP is used to explain individual predictions.[m
+[32m+[m
+[32m+[m[32mThe platform provides insight into:[m
+[32m+[m
+[32m+[m[32m- Features increasing churn risk[m
+[32m+[m[32m- Features decreasing churn risk[m
+[32m+[m[32m- Global feature importance[m
+[32m+[m[32m- Individual customer prediction explanations[m
+[32m+[m
+[32m+[m[32mThis improves model transparency and helps users understand why a prediction was generated.[m
+[32m+[m
+[32m+[m[32m## 🖥️ Application Features[m
+[32m+[m
+[32m+[m[32mThe Streamlit application is organized into the following pages:[m
+[32m+[m
+[32m+[m[32m### Dashboard[m
+[32m+[m
+[32m+[m[32mProvides an overview of:[m
+[32m+[m
+[32m+[m[32m- Customer churn distribution[m
+[32m+[m[32m- Dataset preview[m
+[32m+[m[32m- Application status[m
+[32m+[m[32m- Loaded model status[m
+[32m+[m[32m- Loaded preprocessing pipeline[m
+[32m+[m
+[32m+[m[32m### Single Prediction[m
+[32m+[m
+[32m+[m[32mAllows users to enter individual customer information and receive:[m
+[32m+[m
+[32m+[m[32m- Churn prediction[m
+[32m+[m[32m- Churn probability[m
+[32m+[m[32m- Risk assessment[m
+[32m+[m
+[32m+[m[32m### Batch Prediction[m
+[32m+[m
+[32m+[m[32mAllows users to upload customer data and generate predictions for multiple customers.[m
+[32m+[m
+[32m+[m[32m### Explainability[m
+[32m+[m
+[32m+[m[32mProvides SHAP-based explanations for model predictions.[m
+[32m+[m
+[32m+[m[32m### Model Performance[m
+[32m+[m
+[32m+[m[32mDisplays model evaluation results and performance information.[m
+[32m+[m
+[32m+[m[32m### About[m
+[32m+[m
+[32m+[m[32mProvides project and system information.[m
+[32m+[m
+[32m+[m[32m## 🔌 FastAPI REST API[m
+[32m+[m
+[32m+[m[32mThe project includes a REST API for machine learning predictions.[m
+[32m+[m
+[32m+[m[32m### Available Endpoints[m
+[32m+[m
+[32m+[m[32m| Method | Endpoint | Description |[m
+[32m+[m[32m| --- | --- | --- |[m
+[32m+[m[32m| GET | `/` | API information |[m
+[32m+[m[32m| GET | `/health` | API health check |[m
+[32m+[m[32m| POST | `/predict` | Generate customer churn prediction |[m
+[32m+[m[32m| GET | `/docs` | Swagger API documentation |[m
+[32m+[m
+[32m+[m[32m`POST /predict` accepts a JSON object of raw customer features and returns the churn `prediction`, churn `probability`, and a `risk` assessment (`Low` / `Medium` / `High`).[m
+[32m+[m
+[32m+[m[32m## 🐳 Docker[m
+[32m+[m
+[32m+[m[32mThe application is containerized using Docker and orchestrated with Docker Compose.[m
+[32m+[m
+[32m+[m[32m| Service | Container | Port | URL |[m
+[32m+[m[32m| --- | --- | --- | --- |[m
+[32m+[m[32m| Streamlit | `churn-streamlit` | 8501 | http://localhost:8501 |[m
+[32m+[m[32m| FastAPI | `churn-api` | 8000 | http://localhost:8000 |[m
+[32m+[m[32m| Swagger Documentation | — | 8000 | http://localhost:8000/docs |[m
+[32m+[m
+[32m+[m[32m## 📁 Project Structure[m
+[32m+[m
+[32m+[m[32m```text[m
+[32m+[m[32mcustomer-churn-platform/[m
+[32m+[m[32m│[m
+[32m+[m[32m├── api/                       # FastAPI application[m
+[32m+[m[32m│   ├── __init__.py[m
+[32m+[m[32m│   ├── dependencies.py[m
+[32m+[m[32m│   ├── main.py[m
+[32m+[m[32m│   ├── routes.py[m
+[32m+[m[32m│   └── schemas.py[m
+[32m+[m[32m│[m
+[32m+[m[32m├── data/[m
+[32m+[m[32m│   ├── raw/[m
+[32m+[m[32m│   ├── processed/[m
+[32m+[m[32m│   └── external/[m
+[32m+[m[32m│[m
+[32m+[m[32m├── docs/[m
+[32m+[m[32m│[m
+[32m+[m[32m├── models/                    # Trained model artifacts[m
+[32m+[m[32m│   ├── best_threshold.pkl[m
+[32m+[m[32m│   ├── churn_prediction_model.pkl[m
+[32m+[m[32m│   ├── final_churn_model.pkl[m
+[32m+[m[32m│   └── preprocessor.pkl[m
+[32m+[m[32m│[m
+[32m+[m[32m├── notebooks/                 # ML workflow notebooks[m
+[32m+[m[32m│   ├── 01_exploratory_data_analysis.ipynb[m
+[32m+[m[32m│   ├── 02_data_preprocessing_feature_engineering.ipynb[m
+[32m+[m[32m│   ├── 03_model_training.ipynb[m
+[32m+[m[32m│   └── 04_explainable_ai.ipynb[m
+[32m+[m[32m│[m
+[32m+[m[32m├── reports/                   # Generated model reports[m
+[32m+[m[32m│   ├── customer_explanation.csv[m
+[32m+[m[32m│   ├── feature_importance.csv[m
+[32m+[m[32m│   ├── model_comparison.csv[m
+[32m+[m[32m│   └── training_summary.csv[m
+[32m+[m[32m│[m
+[32m+[m[32m├── screenshots/[m
+[32m+[m[32m│[m
+[32m+[m[32m├── src/                       # Streamlit application source[m
+[32m+[m[32m│   ├── app.py[m
+[32m+[m[32m│   ├── assets/[m
+[32m+[m[32m│   ├── config/[m
+[32m+[m[32m│   ├── ml/[m
+[32m+[m[32m│   ├── pages/[m
+[32m+[m[32m│   ├── repositories/[m
+[32m+[m[32m│   ├── schemas/[m
+[32m+[m[32m│   ├── services/[m
+[32m+[m[32m│   ├── ui/[m
+[32m+[m[32m│   └── utils/[m
+[32m+[m[32m│[m
+[32m+[m[32m├── tests/[m
+[32m+[m[32m│[m
+[32m+[m[32m├── .dockerignore[m
+[32m+[m[32m├── Dockerfile                 # Streamlit container[m
+[32m+[m[32m├── Dockerfile.api             # FastAPI container[m
+[32m+[m[32m├── docker-compose.yml[m
+[32m+[m[32m├── gitignore[m
+[32m+[m[32m├── requirements.txt[m
+[32m+[m[32m└── README.md[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m## 🛠️ Technologies[m
+ [m
+ - Python[m
+ - Pandas[m
+ - NumPy[m
+[31m-- Scikit-Learn[m
+[32m+[m[32m- Scikit-learn[m
+ - SHAP[m
+[31m-- Plotly[m
+[32m+[m[32m- Matplotlib[m
+[32m+[m[32m- Joblib[m
+ - Streamlit[m
+ - FastAPI[m
+[32m+[m[32m- Uvicorn[m
+[32m+[m[32m- Plotly[m
+ - Docker[m
+[32m+[m[32m- Docker Compose[m
+[32m+[m[32m- Git[m
+[32m+[m[32m- GitHub[m
+ [m
+[31m----[m
+[32m+[m[32m## ▶️ Local Development[m
+ [m
+[31m-## Project Structure[m
+[32m+[m[32mActivate your Python environment (for example):[m
+ [m
+[31m-```text[m
+[31m-customer-churn-platform/[m
+[32m+[m[32m```bash[m
+[32m+[m[32mconda activate customer_churn[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32mInstall dependencies:[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32mpip install -r requirements.txt[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32mRun Streamlit:[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32mpython -m streamlit run src/app.py[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32mRun FastAPI:[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32muvicorn api.main:app --reload[m
+ ```[m
+ [m
+[31m----[m
+[32m+[m[32m## 🚀 Run with Docker Compose[m
+[32m+[m
+[32m+[m[32mBuild the containers:[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32mdocker compose build[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32mStart the application:[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32mdocker compose up[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32mStop the application:[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32mdocker compose down[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m## 🧪 Testing[m
+[32m+[m
+[32m+[m[32mThe `tests/` directory is reserved for automated tests.[m
+[32m+[m
+[32m+[m[32mVerify the FastAPI health endpoint:[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32mcurl http://localhost:8000/health[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32mVerify the Swagger documentation:[m
+[32m+[m
+[32m+[m[32mhttp://localhost:8000/docs[m
+ [m
+[31m-## Dataset[m
+[32m+[m[32m## 📌 Key Project Highlights[m
+ [m
+[31m-IBM Telco Customer Churn Dataset[m
+[32m+[m[32m- End-to-end machine learning workflow[m
+[32m+[m[32m- Production-style project architecture[m
+[32m+[m[32m- Feature engineering pipeline[m
+[32m+[m[32m- Random Forest classification[m
+[32m+[m[32m- SHAP explainability[m
+[32m+[m[32m- Single prediction[m
+[32m+[m[32m- Batch prediction[m
+[32m+[m[32m- Streamlit application[m
+[32m+[m[32m- FastAPI REST API[m
+[32m+[m[32m- Docker containerization[m
+[32m+[m[32m- Docker Compose orchestration[m
+[32m+[m[32m- GitHub-ready project structure[m
+ [m
+[31m----[m
+[32m+[m[32m## 👨‍💻 Author[m
+ [m
+[31m-## Project Status[m
+[32m+[m[32mHafiz Ahmad Adil[m
+ [m
+[31m-🚧 In Development[m
+[32m+[m[32mMachine Learning Engineer | AI Educator | IT Instructor[m
+ [m
+[31m----[m
+[32m+[m[32m- GitHub: https://github.com/hafizahmadadilaiengineer[m
+[32m+[m[32m- LinkedIn: https://www.linkedin.com/in/hafizahmadadildurrani[m
+ [m
+[31m-## Author[m
+[32m+[m[32m## 📄 License[m
+ [m
+[31m-Hafiz Ahmad Adil[m
+\ No newline at end of file[m
+[32m+[m[32mThis project is intended for educational, portfolio, and demonstration purposes.[m
