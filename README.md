@@ -349,6 +349,74 @@ http://localhost:8000/docs
 - Docker Compose orchestration
 - GitHub-ready project structure
 
+## 📸 Application Screenshots
+
+### 🏠 Dashboard
+
+#### Dashboard Overview
+
+![Dashboard Top](screenshots/dashboard-top.png)
+
+#### Dashboard Dataset & Analytics
+
+![Dashboard Bottom](screenshots/dashboard-bottom.png)
+
+---
+
+### 🎯 Single Customer Prediction
+
+#### Customer Input
+
+![Single Customer Prediction - Input](screenshots/single-prediction-top.png)
+
+#### Prediction Result
+
+![Single Customer Prediction - Result](screenshots/single-prediction-bottom.png)
+
+---
+
+### 📊 Batch Prediction
+
+#### Batch Prediction Results
+
+![Batch Prediction](screenshots/batch-prediction-after-upload.png)
+
+---
+
+### 🔍 Explainable AI
+
+#### Model Explainability
+
+![Model Explainability](screenshots/model-explainability-after-upload.png)
+
+#### SHAP Explanation
+
+![SHAP Feature Explanation](screenshots/model-explainability-after-upload-shap-value.png)
+
+---
+
+### 📈 Model Performance
+
+#### Performance Overview
+
+![Model Performance](screenshots/model-performance-top.png)
+
+#### ROC Curve
+
+![ROC Curve](screenshots/model-performance-roc.png)
+
+#### Detailed Performance
+
+![Model Performance Details](screenshots/model-performance-bottom.png)
+
+---
+
+### 🔌 FastAPI
+
+#### Swagger API Documentation
+
+![FastAPI Swagger](screenshots/api-swagger.png)
+
 ## 👨‍💻 Author
 
 Hafiz Ahmad Adil
