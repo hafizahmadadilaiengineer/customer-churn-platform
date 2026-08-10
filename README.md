@@ -5,6 +5,7 @@ An end-to-end machine learning platform for predicting customer churn, explainin
 ## Table of Contents
 
 - [Project Overview](#-project-overview)
+- [Production Deployment](#-production-deployment)
 - [Business Objective](#-business-objective)
 - [System Architecture](#-system-architecture)
 - [Machine Learning Workflow](#-machine-learning-workflow)
@@ -38,6 +39,22 @@ This project builds a complete machine learning solution that:
 - Exposes predictions through a FastAPI REST API.
 - Provides an interactive Streamlit interface.
 - Runs through Docker and Docker Compose.
+
+## 🌐 Production Deployment
+
+The platform is live in production. The application is containerized with Docker and deployed on **Render**.
+
+- [Live Streamlit App](https://customer-churn-platform-front.onrender.com/)
+- [Batch Prediction](https://customer-churn-platform-front.onrender.com/Batch_Prediction)
+- [FastAPI API](https://customer-churn-platform-xbe4.onrender.com/)
+- [API Documentation (Swagger)](https://customer-churn-platform-xbe4.onrender.com/docs)
+- [API Health Check](https://customer-churn-platform-xbe4.onrender.com/health)
+
+**Production Architecture**
+
+```text
+User → Streamlit Frontend → FastAPI Backend → ML Prediction Pipeline → Prediction Result
+```
 
 ## 🎯 Business Objective
 
