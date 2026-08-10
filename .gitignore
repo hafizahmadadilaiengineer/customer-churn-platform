@@ -23,6 +23,11 @@ conda-meta/
 .ipynb_checkpoints/
 
 # =========================
+# Pytest
+# =========================
+.pytest_cache/
+
+# =========================
 # VS Code
 # =========================
 .vscode/
@@ -36,6 +41,7 @@ conda-meta/
 # Environment Variables
 # =========================
 .env
+.env.*
 
 # =========================
 # Logs

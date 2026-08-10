@@ -251,7 +251,7 @@ customer-churn-platform/
 ├── Dockerfile                 # Streamlit container
 ├── Dockerfile.api             # FastAPI container
 ├── docker-compose.yml
-├── gitignore
+├── .gitignore
 ├── requirements.txt
 └── README.md
 ```

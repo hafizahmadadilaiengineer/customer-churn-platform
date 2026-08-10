@@ -8,7 +8,7 @@ __pycache__/
 .env
 docs/
 docker-compose.yml
-gitignore
+.gitignore
 notebooks/
 README.md
 reports/
