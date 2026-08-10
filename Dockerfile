@@ -17,4 +17,4 @@ EXPOSE 8501
 
 ENV PYTHONPATH=/app
 
-CMD ["python", "-m", "streamlit", "run", "src/app.py", "--server.address=0.0.0.0"]
+CMD python -m streamlit run src/app.py --server.address=0.0.0.0 --server.port=${PORT:-8501}
